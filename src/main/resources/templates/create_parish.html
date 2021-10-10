@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opret Sogn</title>
+  <link href="/webjars/bootstrap/5.0.1/css/bootstrap.css" rel="stylesheet">
+  <script src="/webjars/bootstrap/5.0.1/js/bootstrap.bundle.js"></script>
+  <script src="/webjars/popper.js/2.9.2/umd/popper.js"></script>
+  <script type="text/javascript" th:src="@{create_parish.js}" defer></script>
+  <link rel="stylesheet" type="text/css" th:href="@{style.css}"/>
+</head>
+<body>
+
+<!--#region Header  -->
+<header th:insert="fragments/header"></header>
+<!--#endregion -->
+
+<div class="container-fluid">
+    <div class="row">
+        <h1>Opret nyt sogn</h1>
+        <form class="divForm" id="parishForm" onsubmit="submitForm()">
+            <label for="code">Sognkode</label>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <input class="form-control" type="text" id="code" required>
+                </div>
+            </div>
+
+            <label for="name">Navn</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <input class="form-control" type="text" id="name" required>
+                </div>
+            </div>
+
+            <label for="positivePercentage">Positivprocent</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <input class="form-control" type="number" id="positivePercentage" step=".01" required>
+                </div>
+            </div>
+
+            <label for="incidents">Incidens</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <input class="form-control" type="number" id="incidents" step=".01" required>
+                </div>
+            </div>
+
+            <label for="totalInfectedLastWeek">Antal nye smittede</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <input class="form-control" type="number" id="totalInfectedLastWeek" required>
+                </div>
+            </div>
+
+            <label for="dropdownMunicipalities">Kommune</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <select id="dropdownMunicipalities"></select>
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <input id="save" type="submit" class="btn btn-success" value="Opret">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

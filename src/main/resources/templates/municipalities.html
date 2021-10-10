@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kommuner</title>
+    <link href="/webjars/bootstrap/5.0.1/css/bootstrap.css" rel="stylesheet">
+    <script src="/webjars/bootstrap/5.0.1/js/bootstrap.bundle.js"></script>
+    <script src="/webjars/popper.js/2.9.2/umd/popper.js"></script>
+    <script type="text/javascript" th:src="@{municipalities.js}" defer></script>
+    <link rel="stylesheet" type="text/css" th:href="@{style.css}"/>
+</head>
+<body>
+
+<!--#region Header  -->
+<header th:insert="fragments/header"></header>
+<!--#endregion -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <h1>Kommuner</h1>
+                <table class="table" id="municipalitiesTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Kommunekode</th>
+                            <th scope="col">Kommune</th>
+                            <th scope="col">Positivprocent</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

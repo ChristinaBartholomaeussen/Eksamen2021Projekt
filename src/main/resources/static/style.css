@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+}
+
+.input-group{
+    position: relative;
+    width: 100%;
+    flex-wrap: nowrap;
+    display: block;
+}
+
+.divForm{
+    margin: auto;
+    width: 40%;
+}
+
+th, tr{
+    text-align: center;
+}
+
+
+
